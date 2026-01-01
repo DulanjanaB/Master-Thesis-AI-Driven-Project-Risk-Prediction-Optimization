@@ -60,6 +60,9 @@ models/saved/*
 *.log
 logs/
 
+# Outputs
+outputs/
+
 # OS
 .DS_Store
 Thumbs.db
