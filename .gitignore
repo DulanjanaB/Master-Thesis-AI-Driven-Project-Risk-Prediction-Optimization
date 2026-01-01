@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Packaging
+build/
+dist/
+*.egg-info/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Data / models / reports (keep folders, ignore generated artifacts)
+data/**
+!data/.gitkeep
+!data/synthetic/.gitkeep
+models/**
+!models/.gitkeep
+reports/**
+!reports/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db

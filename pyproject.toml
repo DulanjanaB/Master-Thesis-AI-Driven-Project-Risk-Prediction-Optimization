@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "risk-analyzer"
+version = "0.1.0"
+description = "AI-powered Lessons Learned risk analyzer (synthetic PoC)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{ name = "Your Name" }]
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.1",
+  "scikit-learn>=1.4",
+  "joblib>=1.3",
+]
+
+[project.optional-dependencies]
+explain = [
+  "shap>=0.44",
+]
+dev = [
+  "ruff>=0.5",
+]
+
+[project.scripts]
+risk-analyzer = "risk_analyzer.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
